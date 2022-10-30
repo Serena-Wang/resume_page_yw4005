@@ -1,7 +1,35 @@
 ---
-title: "About this website"
+title: "Experiences"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
+
+## **Education**
+
+
+**Columbia University 2022 - Present**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Doctoral student in Biostatistics 
+
+**Mount Holyoke College 2016 - 2020**
+
+&nbsp;&nbsp;&nbsp;&nbsp;B.A. in Computer Sciences
+
+&nbsp;&nbsp;&nbsp;&nbsp;B.A. in Statistics
+
+&nbsp;&nbsp;&nbsp;&nbsp;Honors: Magna cum laude
+
+## **Publications**
+\* stands for equal contribution
+
+1. Cramer EY\*, Huang Y\*, Wang Y\*, Ray EL, ..., Reich NG, et al. 2022. The United States COVID-19 Forecast
+Hub Dataset. Scientific Data - Nature https://doi.org/10.1038/s41597-022-01517-w
+
+2. Cramer EY, Ray EL, Lopez VK, Bracher J, ..., Wang Y, ..., Johansson M, Biggerstaff M, Reich NG, et al.2022. Evaluation of Individual and Ensemble Probabilistic Forecasts of COVID-19 Mortality in the US.
+Proceedings of the National Academy of Sciences   https://doi.org/10.1073/pnas.2113561119
+
+3. Ray EL, Brooks LC, Bien J, Biggerstaff M, Bosse NI, Bracher J, Cramer EY, Funk S, Gerding A, Johansson MA, Rumack A, Wang Y, Zorn M, Tibshirani RJ, Reich NG. 2022. Comparison of Trained Probabilistic Ensemble Forecasts of COVID-19 Cases and Deaths in the United States. International Journal of Forecasting https://doi.org/10.1016/j.ijforecast.2022.06.005
+
+
