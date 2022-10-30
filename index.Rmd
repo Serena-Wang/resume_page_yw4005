@@ -5,4 +5,6 @@ output:
     theme: yeti
 ---
 
+Hi! I'm a PhD student in the Department of Biostatistics at [Columbia University](https://www.publichealth.columbia.edu/academics/departments/biostatistics).
 
+Before joinning Columbia, I earned my BA from [Mount Holyoke College](https://www.mtholyoke.edu), where I double majored in Computer Science and Statistics. 
