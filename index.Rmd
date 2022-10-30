@@ -2,11 +2,7 @@
 title: "Yijin Wang"
 output: 
   html_document:
-    toc: true
-    toc_float: true
-    theme: cerulean
+    theme: yeti
 ---
 
-# This is Jeff's awesome website
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)

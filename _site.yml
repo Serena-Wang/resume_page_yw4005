@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
+    - text: "Experiences"
       href: about.html
     - icon: fa-envelope fa-lg
       href: mailto:<yw4005@cumc.columbia.edu>
@@ -12,4 +12,4 @@ navbar:
 
 output:
   html_document:
-    theme: cerulean
+    theme: yeti
