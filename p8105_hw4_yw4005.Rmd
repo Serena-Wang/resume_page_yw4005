@@ -37,6 +37,16 @@ Column {data-width=400}
 
 ### Chart B
 ```{r}
+instacart %>%
+  filter(department %in% c("produce", "dairy eggs", "snacks")) %>%
+  group_by(order_dow, department) %>%
+  summarise(order_count = n()) %>%
+  ungroup() %>%
+  plot_ly(x= ~order_dow, y = ~order_count, color = ~department,
+          type = 'scatter', mode = 'lines+markers') %>%
+  layout(title=list(text = "Total orders on each day of week <br /><sup>For top 3 selling departments</sup><br />\n"),
+         margin=list( l = 50, r = 50, b = 100, t = 100,  pad = 4))
+
 ```
 
 ### Chart C
