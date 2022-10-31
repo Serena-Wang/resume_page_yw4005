@@ -1,0 +1,45 @@
+---
+title: "p8105_hw4_yw4005"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+data("instacart")
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+instacart %>%
+  group_by(department) %>%
+  summarise(order_count = n(),
+            reorder_rate = sum(reordered)/order_count)%>%
+  mutate(department = fct_reorder(department, order_count)) %>% 
+  plot_ly(x = ~order_count, y= ~department, 
+          type = "bar", colors = "viridis",
+          marker = list(color = ~reorder_rate, showscale = T)) %>% 
+  layout(title=list(text = "Total orders for each department <br /><sup>Colored by reorder rate</sup><br />\n"),
+         margin=list( l = 50, r = 50, b = 100, t = 100,  pad = 4))
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### Chart B
+```{r}
+```
+
+### Chart C
+
+```{r}
+```
