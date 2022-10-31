@@ -52,4 +52,34 @@ instacart %>%
 ### Chart C
 
 ```{r}
+pie_data <- instacart %>%
+  filter(department %in% c("produce", "dairy eggs", "snacks")) %>%
+  group_by(department, aisle) %>%
+  summarise(order_count = n()) 
+plot_ly() %>%
+  add_pie(data = pie_data %>% filter(department == "produce"), 
+          labels = ~aisle, 
+          values = ~order_count, 
+          name = "Produce", 
+          domain = list(x = c(0, 0.4), y = c(0.4, 1)),
+          hole = 0.6, 
+          title = list(text = "Produce", position = "middle center")) %>%
+  add_pie(data = pie_data %>% filter(department == "dairy eggs"), 
+          labels = ~aisle, 
+          values = ~order_count, 
+          name = "Dairy Eggs", 
+          domain = list(x = c(0.6, 1), y = c(0.4, 1)),
+          hole = 0.6,
+          title = list(text = "Dairy Eggs", position = "middle center")) %>%
+  add_pie(data = pie_data %>% filter(department == "snacks"), 
+          labels = ~aisle, 
+          values = ~order_count, 
+          name = "Snacks", 
+          domain = list(x = c(0.25, 0.75), y = c(0, 0.6)),
+          hole = 0.6,
+          title = list(text = "Snacks", position = "middle center")) %>%
+  layout(title = "Aisle-level sales for top  3 selling departments", showlegend = F,
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         margin=list(l = 50, r = 50, b = 100, t = 100,  pad = 4))
 ```
