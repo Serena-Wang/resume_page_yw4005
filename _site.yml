@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Experiences"
       href: about.html
-    - text: "Dashboard_Exercise"
+    - text: "Dashboard"
       href: p8105_hw4_yw4005.html
   right:
     - icon: fa-envelope fa-lg
