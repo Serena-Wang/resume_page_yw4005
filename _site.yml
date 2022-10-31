@@ -1,11 +1,11 @@
-name: "Yay internet!"
+name: "Yijin's website"
 output_dir: "."
 navbar:
   title: "Home"
   left:
     - text: "Experiences"
       href: about.html
-    - text: "Dashboard Exercise"
+    - text: "Dashboard_Exercise"
       href: p8105_hw4_yw4005.html
   right:
     - icon: fa-envelope fa-lg
