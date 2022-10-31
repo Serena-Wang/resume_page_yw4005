@@ -9,17 +9,18 @@ output:
 ## **Education**
 
 
-**Columbia University 2022 - Present**
+**Columbia University &nbsp;&nbsp; 2022 - Present**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Doctoral student in Biostatistics 
 
-**Mount Holyoke College 2016 - 2020**
+**Mount Holyoke College &nbsp;&nbsp; 2016 - 2020**
 
 &nbsp;&nbsp;&nbsp;&nbsp;B.A. in Computer Sciences
 
 &nbsp;&nbsp;&nbsp;&nbsp;B.A. in Statistics
 
 &nbsp;&nbsp;&nbsp;&nbsp;Honors: Magna cum laude
+
 
 ## **Publications**
 \* stands for equal contribution
@@ -31,5 +32,11 @@ Hub Dataset. Scientific Data - Nature https://doi.org/10.1038/s41597-022-01517-w
 Proceedings of the National Academy of Sciences   https://doi.org/10.1073/pnas.2113561119
 
 3. Ray EL, Brooks LC, Bien J, Biggerstaff M, Bosse NI, Bracher J, Cramer EY, Funk S, Gerding A, Johansson MA, Rumack A, **Wang Y**, Zorn M, Tibshirani RJ, Reich NG. 2022. Comparison of Trained Probabilistic Ensemble Forecasts of COVID-19 Cases and Deaths in the United States. International Journal of Forecasting https://doi.org/10.1016/j.ijforecast.2022.06.005
+
+## **Related Work Experience**
+
+**Deloitte & Touche LLP, New York &nbsp;&nbsp; 2019 Summer**
+
+&nbsp;&nbsp;&nbsp;&nbsp; Consulting Intern
 
 
