@@ -6,7 +6,7 @@ navbar:
     - text: "Experiences"
       href: about.html
     - text: "Dashboard"
-      href: p8105_hw4_yw4005.html
+      href: about.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<yw4005@cumc.columbia.edu>
