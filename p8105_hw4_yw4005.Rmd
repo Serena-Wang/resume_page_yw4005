@@ -18,7 +18,7 @@ data("instacart")
 Column {data-width=400}
 -----------------------------------------------------------------------
 
-### Chart A
+### Overall Sales
 
 ```{r}
 instacart %>%
@@ -39,7 +39,7 @@ instacart %>%
 Column {data-width=400}
 -----------------------------------------------------------------------
 
-### Chart B
+### Sales trend in top selling departments
 ```{r}
 instacart %>%
   mutate(
@@ -71,7 +71,7 @@ instacart %>%
 
 ```
 
-### Chart C
+### Detailed sales in top selling departments
 
 ```{r}
 pie_data <- instacart %>%
