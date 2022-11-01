@@ -26,10 +26,13 @@ instacart %>%
   summarise(order_count = n(),
             reorder_rate = sum(reordered)/order_count)%>%
   mutate(department = fct_reorder(department, order_count)) %>% 
-  plot_ly(x = ~order_count, y= ~department, 
-          type = "bar", colors = "viridis",
+  plot_ly(x = ~order_count, 
+          y= ~department, 
+          type = "bar", 
+          colors = "viridis",
           marker = list(color = ~reorder_rate, showscale = T)) %>% 
-  layout(title=list(text = "Total orders for each department <br /><sup>Colored by reorder rate</sup><br />\n"),
+  layout(title = list(text = "Total orders for each department <br /><sup>Colored by reorder rate</sup><br />\n"),
+         xaxis = list(test = "number of orders"),
          margin=list( l = 50, r = 50, b = 100, t = 100,  pad = 4))
 ```
 
@@ -39,13 +42,31 @@ Column {data-width=400}
 ### Chart B
 ```{r}
 instacart %>%
+  mutate(
+    order_dow = case_when(
+      order_dow == 0 ~ "Sunday",
+      order_dow == 1 ~ "Monday",
+      order_dow == 2 ~ "Tuesday",
+      order_dow == 3 ~ "Wednesday",
+      order_dow == 4 ~ "Thursday", 
+      order_dow == 5 ~ "Friday",
+      order_dow == 6 ~ "Saturday"),
+    order_dow = factor(order_dow, 
+                       levels = c("Monday", "Tuesday", "Wednesday", 
+                          "Thursday", "Friday", "Saturday", "Sunday"),
+                       ordered = TRUE)) %>%
   filter(department %in% c("produce", "dairy eggs", "snacks")) %>%
   group_by(order_dow, department) %>%
   summarise(order_count = n()) %>%
   ungroup() %>%
-  plot_ly(x= ~order_dow, y = ~order_count, color = ~department,
-          type = 'scatter', mode = 'lines+markers') %>%
-  layout(title=list(text = "Total orders on each day of week <br /><sup>For top 3 selling departments</sup><br />\n"),
+  plot_ly(x = ~order_dow, 
+          y = ~order_count, 
+          color = ~department,
+          type = 'scatter', 
+          mode = 'lines+markers') %>%
+  layout(title = list(text = "Total orders on each day of week <br /><sup>For top 3 selling departments</sup><br />\n"),
+         xaxis = list(text = "day of week"),
+         yaxis = list(test = "number of orders"),
          margin=list( l = 50, r = 50, b = 100, t = 100,  pad = 4))
 
 ```
@@ -57,6 +78,7 @@ pie_data <- instacart %>%
   filter(department %in% c("produce", "dairy eggs", "snacks")) %>%
   group_by(department, aisle) %>%
   summarise(order_count = n()) 
+
 plot_ly() %>%
   add_pie(data = pie_data %>% filter(department == "produce"), 
           labels = ~aisle, 
