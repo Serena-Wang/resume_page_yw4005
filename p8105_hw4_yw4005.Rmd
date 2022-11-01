@@ -32,7 +32,7 @@ instacart %>%
           colors = "viridis",
           marker = list(color = ~reorder_rate, showscale = T)) %>% 
   layout(title = list(text = "Total orders for each department <br /><sup>Colored by reorder rate</sup><br />\n"),
-         xaxis = list(test = "number of orders"),
+         xaxis = list(title = "number of orders"),
          margin=list( l = 50, r = 50, b = 100, t = 100,  pad = 4))
 ```
 
@@ -65,8 +65,8 @@ instacart %>%
           type = 'scatter', 
           mode = 'lines+markers') %>%
   layout(title = list(text = "Total orders on each day of week <br /><sup>For top 3 selling departments</sup><br />\n"),
-         xaxis = list(text = "day of week"),
-         yaxis = list(test = "number of orders"),
+         xaxis = list(title = "day of week"),
+         yaxis = list(title = "number of orders"),
          margin=list( l = 50, r = 50, b = 100, t = 100,  pad = 4))
 
 ```
